@@ -93,12 +93,12 @@ const shoppingList = (function(){
     }
     
     
-    function toggleCheckedItemsFilter() {
-      store.hideCheckedItems = !store.hideCheckedItems;
-    }
+    // function toggleCheckedItemsFilter() {
+    //   store.hideCheckedItems = !store.hideCheckedItems;
+    // }
     
     function setSearchTerm(val) {
-      store.searchTerm = val;
+      store.setSearchTerm(val);
     }
     
     
@@ -126,7 +126,7 @@ const shoppingList = (function(){
     
     function handleToggleFilterClick() {
       $('.js-filter-checked').click(() => {
-        toggleCheckedItemsFilter();
+        store.toggleCheckedFilter();
         render();
       });
     }
