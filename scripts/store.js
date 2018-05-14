@@ -44,12 +44,12 @@ const store = (function(){
     items.splice(index, 1);
   };
 
-  const toggleCheckedFilter = () => {
-    store.hideCheckedItems = !store.hideCheckedItems;
+  const toggleCheckedFilter = function() {
+    this.hideCheckedItems = !this.hideCheckedItems;
   };
 
-  const setSearchTerm = term => {
-    searchTerm = term;
+  const setSearchTerm = function(term) {
+    this.searchTerm = term;
   }
 
   return {
